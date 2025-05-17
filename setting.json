@@ -1,0 +1,171 @@
+{
+    // vimsetting
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.easymotion": true,
+    "vim.visualstar": true,
+    "vim.hlsearch": true,
+    "vim.handleKeys": {
+        "<C-@>": false,
+        "<C-p>": false,
+        "<C-q>": false,
+        "<C-i>": false,
+        "<C-b>": false
+    },
+    "workbench.list.keyboardNavigation": "simple",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["u"],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": ["<C-r>"],
+            "commands": [
+                {
+                    "command": "redo"
+                }
+            ]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        },
+        {
+            "before": ["x"],
+            "after": ["\"", "_", "x"]
+        },
+        {
+            "before": ["s"],
+            "after": ["\"", "_", "s"]
+        },
+        {
+            "before": ["n"],
+            "after": ["n", "z", "z"]
+        },
+        {
+            "before": ["N"],
+            "after": ["N", "z", "z"]
+        },
+        {
+            "before": ["*"],
+            "after": ["*", "z", "z"]
+        },
+        {
+            "before": ["#"],
+            "after": ["#", "z", "z"]
+        },
+        {
+            "before": ["<Enter>"],
+            "commands": ["editor.action.insertLineAfter"]
+        },
+        {
+            "before": ["<Leader>", "c"],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine"
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>", "w"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>", "q"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>", "x"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.formatDocument",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["<Leader>", "l"],
+            "after": ["$"]
+        },
+        {
+            "before": ["<Leader>", "h"],
+            "after": ["^"]
+        },
+        {
+            "before": ["<Leader>", "m"],
+            "after": ["%"]
+        },
+        {
+            "before": ["<Leader>", "z"],
+            "commands": [":noh"]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        {
+            "before": [";", ";"],
+            "commands": ["editor.action.triggerSuggest"]
+        },
+        {
+            "before": ["<C-s>"],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save" // 保存コマンド
+                }
+            ],
+            "after": ["<Esc>"] // Escキー相当の動作
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Leader>", "l"],
+            "after": ["$"]
+        },
+        {
+            "before": ["<Leader>", "h"],
+            "after": ["^"]
+        },
+        {
+            "before": ["<Leader>", "m"],
+            "after": ["%"]
+        },
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        }
+    ],
+    "workbench.colorTheme": "Iceberg",
+    "files.exclude": {
+        "**/.sfdx": true
+    },
+    "github.copilot.chat.reviewSelection.instructions": [],
+    "diffEditor.hideUnchangedRegions.enabled": true
+}
